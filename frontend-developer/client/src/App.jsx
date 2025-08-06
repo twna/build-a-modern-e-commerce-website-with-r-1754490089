@@ -1,18 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import AboutPage from './AboutPage';
+import ContactPage from './ContactPage';
+import NotFoundPage from './NotFoundPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to My React App</h1>
-      </header>
-      <main>
-        {/* Content and other components will go here */}
-      </main>
-      <footer>
-        <p>© 2023 My React App</p>
-      </footer>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
@@ -20,23 +22,27 @@ export default App;
 {
   "checklist": [
     {
-      "item": "Create App component",
+      "step": "Install React Router",
       "completed": true
     },
     {
-      "item": "Import React",
+      "step": "Import BrowserRouter, Routes, and Route from react-router-dom",
       "completed": true
     },
     {
-      "item": "Return JSX from App",
+      "step": "Wrap your application with BrowserRouter",
       "completed": true
     },
     {
-      "item": "Include header, main, and footer sections",
+      "step": "Define routes using Routes and Route",
       "completed": true
     },
     {
-      "item": "Export App component",
+      "step": "Create components for each route",
+      "completed": true
+    },
+    {
+      "step": "Handle not found routes with a catch-all route",
       "completed": true
     }
   ]
