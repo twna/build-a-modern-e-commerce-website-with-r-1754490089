@@ -1,0 +1,110 @@
+[
+  {
+    "id": "task-1",
+    "agent": "frontend-developer",
+    "description": "Set up the React project structure with create-react-app",
+    "file_path": "client/package.json"
+  },
+  {
+    "id": "task-2",
+    "agent": "frontend-developer",
+    "description": "Create the main App component",
+    "file_path": "client/src/App.jsx"
+  },
+  {
+    "id": "task-3",
+    "agent": "frontend-developer",
+    "description": "Implement the navigation bar component",
+    "file_path": "client/src/components/NavBar.jsx"
+  },
+  {
+    "id": "task-4",
+    "agent": "frontend-developer",
+    "description": "Implement the product list component",
+    "file_path": "client/src/components/ProductList.jsx"
+  },
+  {
+    "id": "task-5",
+    "agent": "frontend-developer",
+    "description": "Implement the product detail component",
+    "file_path": "client/src/components/ProductDetail.jsx"
+  },
+  {
+    "id": "task-6",
+    "agent": "frontend-developer",
+    "description": "Implement the shopping cart component",
+    "file_path": "client/src/components/ShoppingCart.jsx"
+  },
+  {
+    "id": "task-7",
+    "agent": "frontend-developer",
+    "description": "Implement the checkout form component",
+    "file_path": "client/src/components/CheckoutForm.jsx"
+  },
+  {
+    "id": "task-8",
+    "agent": "frontend-developer",
+    "description": "Add routing using React Router",
+    "file_path": "client/src/App.jsx"
+  },
+  {
+    "id": "task-9",
+    "agent": "frontend-developer",
+    "description": "Style the components using CSS or a CSS-in-JS library",
+    "file_path": "client/src/styles/main.css"
+  },
+  {
+    "id": "task-10",
+    "agent": "backend-developer",
+    "description": "Set up the Node.js server with Express",
+    "file_path": "server/index.js"
+  },
+  {
+    "id": "task-11",
+    "agent": "backend-developer",
+    "description": "Create the database schema for PostgreSQL",
+    "file_path": "server/database/schema.sql"
+  },
+  {
+    "id": "task-12",
+    "agent": "backend-developer",
+    "description": "Implement the products API endpoints",
+    "file_path": "server/routes/products.js"
+  },
+  {
+    "id": "task-13",
+    "agent": "backend-developer",
+    "description": "Implement the users API endpoints",
+    "file_path": "server/routes/users.js"
+  },
+  {
+    "id": "task-14",
+    "agent": "backend-developer",
+    "description": "Implement the orders API endpoints",
+    "file_path": "server/routes/orders.js"
+  },
+  {
+    "id": "task-15",
+    "agent": "backend-developer",
+    "description": "Set up authentication and authorization",
+    "file_path": "server/routes/auth.js"
+  },
+  {
+    "id": "task-16",
+    "agent": "backend-developer",
+    "description": "Integrate the Node.js server with PostgreSQL using an ORM",
+    "file_path": "server/models/index.js"
+  },
+  {
+    "id": "task-17",
+    "agent": "devops-engineer",
+    "description": "Containerize the application using Docker",
+    "file_path": "Dockerfile"
+  },
+  {
+    "id": "task-18",
+    "agent": "devops-engineer",
+    "description": "Set up a CI/CD pipeline for automated testing and deployment",
+    "file_path": ".github/workflows/ci-cd.yml"
+  }
+]
