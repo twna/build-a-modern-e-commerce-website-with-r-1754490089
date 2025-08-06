@@ -1,0 +1,32 @@
+npx create-react-app my-react-app
+cd my-react-app
+npm start
+{
+  "checklist": [
+    {
+      "step": "Check Node.js installation",
+      "command": "node -v",
+      "description": "Ensure Node.js is installed on your system."
+    },
+    {
+      "step": "Check npm installation",
+      "command": "npm -v",
+      "description": "Ensure npm is installed on your system."
+    },
+    {
+      "step": "Create React App",
+      "command": "npx create-react-app my-react-app",
+      "description": "Create a new React application with the specified name."
+    },
+    {
+      "step": "Navigate to Project Directory",
+      "command": "cd my-react-app",
+      "description": "Change to the project directory."
+    },
+    {
+      "step": "Start Development Server",
+      "command": "npm start",
+      "description": "Start the development server to view the application."
+    }
+  ]
+}
