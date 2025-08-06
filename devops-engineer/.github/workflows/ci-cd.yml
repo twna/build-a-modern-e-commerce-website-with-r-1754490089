@@ -1,0 +1,78 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: Install dependencies
+      run: npm install
+    - name: Run tests
+      run: npm test
+    - name: Build
+      run: npm run build
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy to Production
+      run: ./deploy.sh
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+{
+  "checklist": [
+    {
+      "item": "Set up a GitHub repository",
+      "checked": true
+    },
+    {
+      "item": "Create a .github/workflows directory in your repository",
+      "checked": true
+    },
+    {
+      "item": "Write a ci-cd-pipeline.yml file",
+      "checked": true
+    },
+    {
+      "item": "Define the trigger events for the pipeline",
+      "checked": true
+    },
+    {
+      "item": "Set up jobs for building, testing, and deployment",
+      "checked": true
+    },
+    {
+      "item": "Store sensitive information in GitHub Secrets",
+      "checked": true
+    },
+    {
+      "item": "Ensure the deployment script is executable",
+      "checked": true
+    },
+    {
+      "item": "Test the pipeline by pushing changes to the main branch",
+      "checked": false
+    },
+    {
+      "item": "Monitor the pipeline execution and review logs",
+      "checked": false
+    },
+    {
+      "item": "Adjust the pipeline configuration as necessary",
+      "checked": false
+    }
+  ]
+}
