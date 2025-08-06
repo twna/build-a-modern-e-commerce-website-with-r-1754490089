@@ -1,0 +1,81 @@
+/* styles.css */
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Button Component</title>
+</head>
+<body>
+  <button class="button">Click me</button>
+</body>
+</html>
+npm install styled-components
+# or
+yarn add styled-components
+// Button.js
+
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+export default function Button({ children }) {
+  return <StyledButton>{children}</StyledButton>;
+}
+// App.js
+
+import React from 'react';
+import Button from './Button';
+
+function App() {
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  );
+}
+
+export default App;
+{
+  "tasks": [
+    {
+      "task": "Style a button using plain CSS",
+      "status": "completed"
+    },
+    {
+      "task": "Style a button using styled-components",
+      "status": "completed"
+    }
+  ]
+}
